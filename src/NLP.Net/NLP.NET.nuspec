@@ -1,0 +1,30 @@
+<?xml version="1.0"?>
+<package >
+  <metadata>
+    <id>$id$</id>
+    <version>$version$</version>
+    <title>$title$</title>
+    <authors>$author$</authors>
+    <owners>$author$</owners>
+    <licenseUrl>https://github.com/emotionalcode/nlp-net/blob/master/LICENSE</licenseUrl>
+    <projectUrl>https://github.com/emotionalcode/nlp-net</projectUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>$description$</description>
+    <releaseNotes>alpha version (unstable)</releaseNotes>
+    <copyright>Copyright 2016</copyright>
+    <tags></tags>
+    <references>
+      <reference file="jhannanum.dll" />
+      <reference file="scala-library-2.11.7.dll" />
+      <reference file="twitter-text-1.11.1.dll" />
+      <reference file="korean-text-4.4.4.dll" />
+      <reference file="NLP.Net.dll" />
+    </references>
+  </metadata>
+  <files>
+    <file src="bin\Debug\jhannanum.dll" target="lib\net461" />
+    <file src="bin\Debug\scala-library-2.11.7.dll" target="lib\net461" />
+    <file src="bin\Debug\twitter-text-1.11.1.dll" target="lib\net461" />
+    <file src="bin\Debug\korean-text-4.4.4.dll" target="lib\net461" />
+  </files>
+</package>
