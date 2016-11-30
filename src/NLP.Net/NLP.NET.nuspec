@@ -26,5 +26,9 @@
     <file src="bin\Debug\scala-library-2.11.7.dll" target="lib\net461" />
     <file src="bin\Debug\twitter-text-1.11.1.dll" target="lib\net461" />
     <file src="bin\Debug\korean-text-4.4.4.dll" target="lib\net461" />
+    <file src="bin\Debug\jhannanum.dll" target="lib\net451" />
+    <file src="bin\Debug\scala-library-2.11.7.dll" target="lib\net451" />
+    <file src="bin\Debug\twitter-text-1.11.1.dll" target="lib\net451" />
+    <file src="bin\Debug\korean-text-4.4.4.dll" target="lib\net451" />
   </files>
 </package>
