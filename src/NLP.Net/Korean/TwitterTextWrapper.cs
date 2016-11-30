@@ -20,7 +20,7 @@ namespace NLP.Net.Korean
         public static IEnumerable<POS> Extract(string text)
         {
             string normalized = TwitterKoreanProcessor.normalize(text).toString();
-            var tokenized = TwitterKoreanProcessor.tokenize(text);
+            var tokenized = TwitterKoreanProcessor.tokenize(normalized);
             var stemmed = TwitterKoreanProcessor.stem(tokenized);
             var phrases = TwitterKoreanProcessor.extractPhrases(stemmed, true, false);
             return phrases.ToPosList();
