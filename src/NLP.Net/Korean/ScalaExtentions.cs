@@ -8,22 +8,22 @@ using System.Threading.Tasks;
 
 namespace NLP.Net.Korean
 {
-    internal static class ScalaExtentions
+    public static class ScalaExtentions
     {
-        //public static List<POS> ToPosList(this scala.collection.Seq seq)
-        //{
-        //    var result = new List<POS>();
-        //    for (int i = 0; i < seq.size(); i++)
-        //    {
-        //        KoreanTokenizer.KoreanToken scalaResult = seq.apply(i) as KoreanTokenizer.KoreanToken;
-        //        result.Add(new POS()
-        //        {
-        //            POSTag = ((KoreanPos)scalaResult.pos().id()).ToString(),
-        //            Text = scalaResult.text()
-        //        });
-        //    }
-        //    return result;
-        //}
+        public static List<POS> ToPosListFromTokens(this scala.collection.Seq seq)
+        {
+            var result = new List<POS>();
+            for (int i = 0; i < seq.size(); i++)
+            {
+                KoreanTokenizer.KoreanToken scalaResult = seq.apply(i) as KoreanTokenizer.KoreanToken;
+                result.Add(new POS()
+                {
+                    PosTag = ((TwitterPos)scalaResult.pos().id()).ToString(),
+                    Text = scalaResult.text()
+                });
+            }
+            return result;
+        }
 
         public static List<POS> ToPosList(this scala.collection.Seq seq)
         {

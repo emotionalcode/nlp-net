@@ -10,7 +10,7 @@
     <projectUrl>https://github.com/emotionalcode/nlp-net</projectUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <description>$description$</description>
-    <releaseNotes>alpha version (unstable)</releaseNotes>
+    <releaseNotes>support twitter-korean-text</releaseNotes>
     <copyright>Copyright 2016</copyright>
     <tags></tags>
     <references>
@@ -22,13 +22,15 @@
     </references>
   </metadata>
   <files>
-    <file src="bin\Debug\jhannanum.dll" target="lib\net461" />
-    <file src="bin\Debug\scala-library-2.11.7.dll" target="lib\net461" />
-    <file src="bin\Debug\twitter-text-1.11.1.dll" target="lib\net461" />
-    <file src="bin\Debug\korean-text-4.4.4.dll" target="lib\net461" />
-    <file src="bin\Debug\jhannanum.dll" target="lib\net451" />
-    <file src="bin\Debug\scala-library-2.11.7.dll" target="lib\net451" />
-    <file src="bin\Debug\twitter-text-1.11.1.dll" target="lib\net451" />
-    <file src="bin\Debug\korean-text-4.4.4.dll" target="lib\net451" />
+    <file src="bin\Release\net45\NLP.Net.dll" target="lib\net45\NLP.Net.dll" />
+    <file src="bin\Release\jhannanum.dll" target="lib\net45\jhannanum.dll" />
+    <file src="bin\Release\scala-library-2.11.7.dll" target="lib\net45\scala-library-2.11.7.dll" />
+    <file src="bin\Release\twitter-text-1.11.1.dll" target="lib\net45\twitter-text-1.11.1.dll" />
+    <file src="bin\Release\korean-text-4.4.4.dll" target="lib\net45\korean-text-4.4.4.dll" />
+
+    <file src="bin\Release\jhannanum.dll" target="lib\net461\jhannanum.dll" />
+    <file src="bin\Release\scala-library-2.11.7.dll" target="lib\net461\scala-library-2.11.7.dll" />
+    <file src="bin\Release\twitter-text-1.11.1.dll" target="lib\net461\twitter-text-1.11.1.dll" />
+    <file src="bin\Release\korean-text-4.4.4.dll" target="lib\net461\korean-text-4.4.4.dll" />
   </files>
 </package>
