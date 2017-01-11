@@ -1,5 +1,5 @@
 # nlp-net [![NuGet Badge](https://buildstats.info/nuget/NLP.NET)](https://www.nuget.org/packages/NLP.Net/)
-.net library for [HanNanum](http://semanticweb.kaist.ac.kr/hannanum/), [twitter-korean-text](https://github.com/twitter/twitter-korean-text) using [IKVM](http://www.ikvm.net/).
+.net library for [HanNanum](http://semanticweb.kaist.ac.kr/hannanum/), [twitter-korean-text](https://github.com/twitter/twitter-korean-text), [StanfordNLP](https://sergey-tihon.github.io/Stanford.NLP.NET/StanfordCoreNLP.html) using [IKVM](http://www.ikvm.net/).
 
 
 ### Install
