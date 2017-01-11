@@ -197,6 +197,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Chinese\ChinesePOSExtractor.cs" />
+    <Compile Include="English\EnglishPOSExtractor.cs" />
     <Compile Include="Korean\HannaNumWrapper.cs" />
     <Compile Include="Korean\ScalaExtentions.cs" />
     <Compile Include="Korean\TwitterPos.cs" />

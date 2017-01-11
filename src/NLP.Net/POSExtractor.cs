@@ -17,6 +17,8 @@ namespace NLP.Net
                     return HannaNumWrapper.Extract(text);
                 case NLPType.KoreanTwitter:
                     return TwitterTextWrapper.Extract(text);
+                case NLPType.English:
+                    return English.EnglishPOSExtractor.Extract(text);
                 case NLPType.Chinese:
                     return Chinese.ChinesePOSExtractor.Extract(text);
                 default:
@@ -29,7 +31,7 @@ namespace NLP.Net
     {
         KoreanHanNanum,
         KoreanTwitter,
-        //English,
+        English,
         Chinese
     }
 
