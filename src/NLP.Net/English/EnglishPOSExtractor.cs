@@ -5,38 +5,25 @@ using System.Text;
 using System.Threading.Tasks;
 using edu.stanford.nlp.pipeline;
 using static edu.stanford.nlp.ling.CoreAnnotations;
+using System.IO;
 
-namespace NLP.Net.Chinese
+namespace NLP.Net.English
 {
-    internal static class ChinesePOSExtractor
+    internal static class EnglishPOSExtractor
     {
         static StanfordCoreNLP pipeline;
-        static ChinesePOSExtractor()
+        static EnglishPOSExtractor()
         {
             var props = new java.util.Properties();
-            props.setProperty("annotators", "segment, ssplit, pos");
-            props.setProperty("customAnnotatorClass.segment", "edu.stanford.nlp.pipeline.ChineseSegmenterAnnotator");
+            props.setProperty("annotators", "tokenize, ssplit, pos");
+            props.setProperty("ner.useSUTime", "0");
 
-            props.setProperty("segment.model", "edu/stanford/nlp/models/segmenter/chinese/ctb.gz");
-            props.setProperty("segment.sighanCorporaDict", "edu/stanford/nlp/models/segmenter/chinese");
-            props.setProperty("segment.serDictionary", "edu/stanford/nlp/models/segmenter/chinese/dict-chris6.ser.gz");
-            props.setProperty("segment.sighanPostProcessing", "true");
-
-            //sentence split
-            props.setProperty("ssplit.boundaryTokenRegex", "[.]|[!?]+|[。]|[！？]+");
-
-            //pos
-            props.setProperty("pos.model", "edu/stanford/nlp/models/pos-tagger/chinese-distsim/chinese-distsim.tagger");
-
-            //ner
-            props.setProperty("ner.model", "edu/stanford/nlp/models/ner/chinese.misc.distsim.crf.ser.gz");
-            props.setProperty("ner.applyNumericClassifiers", "false");
-            props.setProperty("ner.useSUTime", "false");
-
-            //# parse
-            props.setProperty("parse.model", "edu/stanford/nlp/models/lexparser/chineseFactored.ser.gz");
+            var curDir = Environment.CurrentDirectory;
+            Directory.SetCurrentDirectory($"{curDir}/english");
 
             pipeline = new StanfordCoreNLP(props);
+            Directory.SetCurrentDirectory(curDir);
+
         }
 
         public static IEnumerable<POS> Extract(string text)

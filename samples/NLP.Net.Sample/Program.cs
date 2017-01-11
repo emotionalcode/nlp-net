@@ -24,6 +24,13 @@ namespace NLP.Net.Sample
             {
                 Console.WriteLine(JsonConvert.SerializeObject(item));
             }
+
+            var englishText = "Female Slayer 2nd awakening avatars gif";
+            var englishResult = POSExtractor.Extract(NLPType.English, englishText);
+            foreach (var item in englishResult)
+            {
+                Console.WriteLine(JsonConvert.SerializeObject(item));
+            }
         }
     }
 }
