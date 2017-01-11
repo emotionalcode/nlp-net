@@ -17,6 +17,8 @@ namespace NLP.Net
                     return HannaNumWrapper.Extract(text);
                 case NLPType.KoreanTwitter:
                     return TwitterTextWrapper.Extract(text);
+                case NLPType.Chinese:
+                    return Chinese.ChinesePOSExtractor.Extract(text);
                 default:
                     throw new Exception($"{nlpType} is not supported");
             }
@@ -28,7 +30,7 @@ namespace NLP.Net
         KoreanHanNanum,
         KoreanTwitter,
         //English,
-        //Chinese
+        Chinese
     }
 
     public class POS

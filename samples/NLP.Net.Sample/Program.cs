@@ -17,6 +17,13 @@ namespace NLP.Net.Sample
             {
                 Console.WriteLine(JsonConvert.SerializeObject(item));
             }
+
+            var chineseText = "我已经把小号能卖掉的挑战书全卖了换春节套了";
+            var chinesResult = POSExtractor.Extract(NLPType.Chinese, chineseText);
+            foreach (var item in chinesResult)
+            {
+                Console.WriteLine(JsonConvert.SerializeObject(item));
+            }
         }
     }
 }
