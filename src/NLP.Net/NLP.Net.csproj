@@ -35,7 +35,7 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="ejml-0.23, Version=0.23.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\..\packages\Stanford.NLP.CoreNLP.3.6.0.0\lib\ejml-0.23.dll</HintPath>
+      <HintPath>..\..\packages\Stanford.NLP.CoreNLP.3.7.0.0\lib\ejml-0.23.dll</HintPath>
       <Private>True</Private>
     </Reference>
     <Reference Include="IKVM.AWT.WinForms, Version=8.1.5717.0, Culture=neutral, PublicKeyToken=13235d27fcbfff58, processorArchitecture=MSIL">
@@ -151,32 +151,40 @@
       <Private>True</Private>
     </Reference>
     <Reference Include="javax.json, Version=1.0.4.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\..\packages\Stanford.NLP.CoreNLP.3.6.0.0\lib\javax.json.dll</HintPath>
+      <HintPath>..\..\packages\Stanford.NLP.CoreNLP.3.7.0.0\lib\javax.json.dll</HintPath>
       <Private>True</Private>
     </Reference>
     <Reference Include="jhannanum">
       <HintPath>..\..\lib\jhannanum\jhannanum.dll</HintPath>
     </Reference>
-    <Reference Include="joda-time, Version=2.9.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\..\packages\Stanford.NLP.CoreNLP.3.6.0.0\lib\joda-time.dll</HintPath>
+    <Reference Include="joda-time, Version=2.9.4.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\Stanford.NLP.CoreNLP.3.7.0.0\lib\joda-time.dll</HintPath>
       <Private>True</Private>
     </Reference>
-    <Reference Include="jollyday, Version=0.4.7.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\..\packages\Stanford.NLP.CoreNLP.3.6.0.0\lib\jollyday.dll</HintPath>
+    <Reference Include="jollyday, Version=0.4.9.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\Stanford.NLP.CoreNLP.3.7.0.0\lib\jollyday.dll</HintPath>
       <Private>True</Private>
     </Reference>
     <Reference Include="korean-text-4.4.4">
       <HintPath>..\..\lib\twitter-korean-processor\korean-text-4.4.4.dll</HintPath>
     </Reference>
+    <Reference Include="protobuf, Version=2.6.1.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\Stanford.NLP.CoreNLP.3.7.0.0\lib\protobuf.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
     <Reference Include="scala-library-2.11.7">
       <HintPath>..\..\lib\twitter-korean-processor\scala-library-2.11.7.dll</HintPath>
     </Reference>
     <Reference Include="slf4j-api, Version=1.7.2.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\..\packages\Stanford.NLP.CoreNLP.3.6.0.0\lib\slf4j-api.dll</HintPath>
+      <HintPath>..\..\packages\Stanford.NLP.CoreNLP.3.7.0.0\lib\slf4j-api.dll</HintPath>
       <Private>True</Private>
     </Reference>
-    <Reference Include="stanford-corenlp-3.6.0, Version=3.6.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\..\packages\Stanford.NLP.CoreNLP.3.6.0.0\lib\stanford-corenlp-3.6.0.dll</HintPath>
+    <Reference Include="slf4j-simple, Version=1.7.2.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\Stanford.NLP.CoreNLP.3.7.0.0\lib\slf4j-simple.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="stanford-corenlp-3.7.0, Version=3.7.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\Stanford.NLP.CoreNLP.3.7.0.0\lib\stanford-corenlp-3.7.0.dll</HintPath>
       <Private>True</Private>
     </Reference>
     <Reference Include="System" />
@@ -191,7 +199,7 @@
       <HintPath>..\..\lib\twitter-korean-processor\twitter-text-1.11.1.dll</HintPath>
     </Reference>
     <Reference Include="xom, Version=1.2.10.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\..\packages\Stanford.NLP.CoreNLP.3.6.0.0\lib\xom.dll</HintPath>
+      <HintPath>..\..\packages\Stanford.NLP.CoreNLP.3.7.0.0\lib\xom.dll</HintPath>
       <Private>True</Private>
     </Reference>
   </ItemGroup>
