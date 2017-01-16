@@ -10,7 +10,7 @@
     <projectUrl>https://github.com/emotionalcode/nlp-net</projectUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <description>$description$</description>
-    <releaseNotes>support english</releaseNotes>
+    <releaseNotes>update nuget package - Stanford.NLP.CoreNLP v3.7</releaseNotes>
     <copyright>Copyright 2016</copyright>
     <tags></tags>
     <references>
