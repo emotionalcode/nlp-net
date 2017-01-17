@@ -210,6 +210,7 @@
     <Compile Include="Korean\ScalaExtentions.cs" />
     <Compile Include="Korean\TwitterPos.cs" />
     <Compile Include="Korean\TwitterTextWrapper.cs" />
+    <Compile Include="NLPCount.cs" />
     <Compile Include="POSExtractor.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

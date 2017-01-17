@@ -41,6 +41,12 @@ namespace NLP.Net.Chinese
 
         public static IEnumerable<POS> Extract(string text)
         {
+            var count = new NLPCount();
+            return Extract(text, ref count);
+        }
+
+        public static IEnumerable<POS> Extract(string text, ref NLPCount count)
+        {
 
             var segment = new List<POS>();
             if (string.IsNullOrEmpty(text)) return segment;
@@ -56,14 +62,15 @@ namespace NLP.Net.Chinese
             java.util.ArrayList sentenceArrayList = (java.util.ArrayList)document.get(sentencesAnnotation.getClass());
             var sentences = sentenceArrayList.toArray();
 
+            count.SentenceCount += sentences.Length;
             for (int i = 0; i < sentences.Length; i++)
             {
                 var sentence = (edu.stanford.nlp.util.CoreMap)sentences[i];
                 var tokenArray = ((java.util.ArrayList)sentence.get(tokensAnnotation.getClass()));
                 var tokens = tokenArray.toArray();
+                count.WordsPhraseCount += tokens.Length;
                 for (int j = 0; j < tokens.Length; j++)
                 {
-
                     var coreLabel = (edu.stanford.nlp.ling.CoreLabel)tokens[j];
                     string posTag = (string)coreLabel.get(partOfSpeechAnnotation.getClass());
                     string word = (string)coreLabel.get(textAnnotation.getClass());

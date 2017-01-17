@@ -19,11 +19,16 @@ namespace NLP.Net.Korean
 
         public static IEnumerable<POS> Extract(string text)
         {
+            var count = new NLPCount();
+            return Extract(text, ref count);
+        }
+
+        public static IEnumerable<POS> Extract(string text, ref NLPCount count)
+        {
             string normalized = TwitterKoreanProcessor.normalize(text).toString();
             var tokenized = TwitterKoreanProcessor.tokenize(normalized);
             var stemmed = TwitterKoreanProcessor.stem(tokenized);
-            var phrases = TwitterKoreanProcessor.extractPhrases(stemmed, true, false);
-            return phrases.ToPosList();
+            return stemmed.ToPosListFromTokens().Where(s => s.PosTag != "Punctuation" && s.PosTag != "Space");
         }
     }
 

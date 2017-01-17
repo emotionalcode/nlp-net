@@ -25,6 +25,23 @@ namespace NLP.Net
                     throw new Exception($"{nlpType} is not supported");
             }
         }
+
+        public static IEnumerable<POS> Extract(NLPType nlpType, string text, ref NLPCount count)
+        {
+            switch (nlpType)
+            {
+                case NLPType.KoreanHanNanum:
+                    return HannaNumWrapper.Extract(text, ref count);
+                case NLPType.KoreanTwitter:
+                    return TwitterTextWrapper.Extract(text, ref count);
+                case NLPType.English:
+                    return English.EnglishPOSExtractor.Extract(text, ref count);
+                case NLPType.Chinese:
+                    return Chinese.ChinesePOSExtractor.Extract(text, ref count);
+                default:
+                    throw new Exception($"{nlpType} is not supported");
+            }
+        }
     }
 
     public enum NLPType
