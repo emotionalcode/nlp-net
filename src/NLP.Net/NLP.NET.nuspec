@@ -10,7 +10,7 @@
     <projectUrl>https://github.com/emotionalcode/nlp-net</projectUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <description>$description$</description>
-    <releaseNotes>change hannanum library</releaseNotes>
+    <releaseNotes>support japanese</releaseNotes>
     <copyright>Copyright 2016</copyright>
     <tags></tags>
     <references>
