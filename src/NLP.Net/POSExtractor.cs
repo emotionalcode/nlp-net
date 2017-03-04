@@ -21,6 +21,8 @@ namespace NLP.Net
                     return English.EnglishPOSExtractor.Extract(text);
                 case NLPType.Chinese:
                     return Chinese.ChinesePOSExtractor.Extract(text);
+                case NLPType.Japanese:
+                    return Japanese.JapanesePOSExtractor.Extract(text);
                 default:
                     throw new Exception($"{nlpType} is not supported");
             }
@@ -38,6 +40,8 @@ namespace NLP.Net
                     return English.EnglishPOSExtractor.Extract(text, ref count);
                 case NLPType.Chinese:
                     return Chinese.ChinesePOSExtractor.Extract(text, ref count);
+                case NLPType.Japanese:
+                    return Japanese.JapanesePOSExtractor.Extract(text, ref count);
                 default:
                     throw new Exception($"{nlpType} is not supported");
             }
@@ -49,7 +53,8 @@ namespace NLP.Net
         KoreanHanNanum,
         KoreanTwitter,
         English,
-        Chinese
+        Chinese,
+        Japanese
     }
 
     public class POS
