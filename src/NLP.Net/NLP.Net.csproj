@@ -11,6 +11,8 @@
     <AssemblyName>NLP.Net</AssemblyName>
     <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -165,6 +167,10 @@
     <Reference Include="korean-text-4.4.4">
       <HintPath>..\..\lib\twitter-korean-processor\korean-text-4.4.4.dll</HintPath>
     </Reference>
+    <Reference Include="LibNMeCab, Version=0.0.6.4, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\NMeCab.0.06.4\lib\LibNMeCab.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
     <Reference Include="NHanNanum">
       <HintPath>..\..\lib\NHanNanum\NHanNanum.dll</HintPath>
     </Reference>
@@ -188,6 +194,7 @@
       <Private>True</Private>
     </Reference>
     <Reference Include="System" />
+    <Reference Include="System.Configuration" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
@@ -206,6 +213,7 @@
   <ItemGroup>
     <Compile Include="Chinese\ChinesePOSExtractor.cs" />
     <Compile Include="English\EnglishPOSExtractor.cs" />
+    <Compile Include="Japanese\JapanesePOSExtractor.cs" />
     <Compile Include="Korean\HannaNumWrapper.cs" />
     <Compile Include="Korean\ScalaExtentions.cs" />
     <Compile Include="Korean\TwitterPos.cs" />
@@ -216,6 +224,11 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="app.config" />
+    <None Include="dic\ipadic\char.bin" />
+    <None Include="dic\ipadic\dicrc" />
+    <None Include="dic\ipadic\matrix.bin" />
+    <None Include="dic\ipadic\sys.dic" />
+    <None Include="dic\ipadic\unk.dic" />
     <None Include="NLP.NET.nuspec">
       <SubType>Designer</SubType>
     </None>
@@ -235,5 +248,12 @@
       <Output TaskParameter="Assemblies" ItemName="OutputAssemblyInfo" />
     </GetAssemblyIdentity>
     <Message Text="Info: %(OutputAssemblyInfo.Version)" />
+  </Target>
+  <Import Project="..\..\packages\NMeCab.0.06.4\build\NMeCab.targets" Condition="Exists('..\..\packages\NMeCab.0.06.4\build\NMeCab.targets')" />
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>이 프로젝트는 이 컴퓨터에 없는 NuGet 패키지를 참조합니다. 해당 패키지를 다운로드하려면 NuGet 패키지 복원을 사용하십시오. 자세한 내용은 http://go.microsoft.com/fwlink/?LinkID=322105를 참조하십시오. 누락된 파일은 {0}입니다.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\..\packages\NMeCab.0.06.4\build\NMeCab.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\..\packages\NMeCab.0.06.4\build\NMeCab.targets'))" />
   </Target>
 </Project>
