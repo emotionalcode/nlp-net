@@ -31,7 +31,7 @@ namespace NLP.Net.Korean
             foreach (jHanNanum.comm.Sentence sentence in sentences)
             {
                 count.SentenceCount++;
-                var eojeols = sentence.getEojeols();
+                var eojeols = sentence.Eojeols;
                 foreach (var eojeol in eojeols)
                 {
                     count.WordsPhraseCount++;
@@ -40,8 +40,8 @@ namespace NLP.Net.Korean
                         count.MorphemeCount++;
                         result.Add(new POS()
                         {
-                            PosTag = eojeol.getTags()[i],
-                            Text = eojeol.getMorphemes()[i]
+                            PosTag = eojeol.Tags[i],
+                            Text = eojeol.Morphemes[i]
                         });
                     }
                 }

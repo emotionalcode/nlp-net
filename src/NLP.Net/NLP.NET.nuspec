@@ -10,11 +10,11 @@
     <projectUrl>https://github.com/emotionalcode/nlp-net</projectUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <description>$description$</description>
-    <releaseNotes>add token counting</releaseNotes>
+    <releaseNotes>change hannanum library</releaseNotes>
     <copyright>Copyright 2016</copyright>
     <tags></tags>
     <references>
-      <reference file="jhannanum.dll" />
+      <reference file="NHanNanum.dll" />
       <reference file="scala-library-2.11.7.dll" />
       <reference file="twitter-text-1.11.1.dll" />
       <reference file="korean-text-4.4.4.dll" />
@@ -23,12 +23,12 @@
   </metadata>
   <files>
     <file src="bin\Release\net45\NLP.Net.dll" target="lib\net45\NLP.Net.dll" />
-    <file src="bin\Release\jhannanum.dll" target="lib\net45\jhannanum.dll" />
+    <file src="bin\Release\NHanNanum.dll" target="lib\net45\NHanNanum.dll" />
     <file src="bin\Release\scala-library-2.11.7.dll" target="lib\net45\scala-library-2.11.7.dll" />
     <file src="bin\Release\twitter-text-1.11.1.dll" target="lib\net45\twitter-text-1.11.1.dll" />
     <file src="bin\Release\korean-text-4.4.4.dll" target="lib\net45\korean-text-4.4.4.dll" />
 
-    <file src="bin\Release\jhannanum.dll" target="lib\net461\jhannanum.dll" />
+    <file src="bin\Release\NHanNanum.dll" target="lib\net461\NHanNanum.dll" />
     <file src="bin\Release\scala-library-2.11.7.dll" target="lib\net461\scala-library-2.11.7.dll" />
     <file src="bin\Release\twitter-text-1.11.1.dll" target="lib\net461\twitter-text-1.11.1.dll" />
     <file src="bin\Release\korean-text-4.4.4.dll" target="lib\net461\korean-text-4.4.4.dll" />

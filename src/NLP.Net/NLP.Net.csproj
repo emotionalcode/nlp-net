@@ -154,9 +154,6 @@
       <HintPath>..\..\packages\Stanford.NLP.CoreNLP.3.7.0.0\lib\javax.json.dll</HintPath>
       <Private>True</Private>
     </Reference>
-    <Reference Include="jhannanum">
-      <HintPath>..\..\lib\jhannanum\jhannanum.dll</HintPath>
-    </Reference>
     <Reference Include="joda-time, Version=2.9.4.0, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\..\packages\Stanford.NLP.CoreNLP.3.7.0.0\lib\joda-time.dll</HintPath>
       <Private>True</Private>
@@ -167,6 +164,9 @@
     </Reference>
     <Reference Include="korean-text-4.4.4">
       <HintPath>..\..\lib\twitter-korean-processor\korean-text-4.4.4.dll</HintPath>
+    </Reference>
+    <Reference Include="NHanNanum">
+      <HintPath>..\..\lib\NHanNanum\NHanNanum.dll</HintPath>
     </Reference>
     <Reference Include="protobuf, Version=2.6.1.0, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\..\packages\Stanford.NLP.CoreNLP.3.7.0.0\lib\protobuf.dll</HintPath>
